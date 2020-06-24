@@ -14,17 +14,17 @@
 你不需要考虑数组中超出新长度后面的元素。
  */
 
- /**
+/**
  * @param {number[]} nums
  * @return {number}
  */
-var removeDuplicates = function(nums){
-    let left = 0;
-    for(let right =0;right<nums.length; right++){
-        if(nums[right]!=nums[right+1]){
-            nums[left] = nums[right];
-            left++;
-        }
+var removeDuplicates = function (nums) {
+  let left = 0;
+  for (let right = 0; right < nums.length; right++) {
+    if (nums[right] != nums[right + 1]) {
+      nums[left] = nums[right];
+      left++;
     }
-    return left;
-}
+  }
+  return left;
+};
