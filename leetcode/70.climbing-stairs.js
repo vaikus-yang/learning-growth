@@ -42,7 +42,9 @@ var climbStairs = function(n){
 },
 
 
-/* 方法2 尾递归 */
+/* 方法2 尾递归 
+避免栈溢出
+*/
 var climbStairs2 = function(n){
     const helper = (s, a=1, b=1)=>{
         if(s<=1) return b;
