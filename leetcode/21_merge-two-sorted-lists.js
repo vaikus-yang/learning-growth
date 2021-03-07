@@ -1,4 +1,6 @@
-/* 
+/*
+21.合并两个有序链表
+
 将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
 
 示例：
@@ -35,8 +37,8 @@ var mergeTwoLists = function (l1, l2) {
 };
 
 //迭代
-var mergeTwoLists = function (l1, l2) {
-  let preHead = new ListNode(-1);
+var mergeTwoLists2 = function (l1, l2) {
+  let preHead = new ListNode();
   let prev = preHead;
 
   while (l1 != null && l2 != null) {
@@ -53,3 +55,7 @@ var mergeTwoLists = function (l1, l2) {
   prev.next = l1 == null ? l2 : l1;
   return preHead.next;
 };
+
+let p1 = genLinkedList([1, 2, 3]);
+let p2 = genLinkedList([1, 3, 4]);
+console.log(logLinkedList(mergeTwoLists(p1, p2)));
